@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZXjjyUK1/VqsTJOKZoiD6DO/jiFDs79lPJZcqQ1dDZI=",
+  "Hash": "/SmokuOBe1jzXtimoQcFjHxr5EVMVfmPOTh459/8kdk=",
   "Source": "BloqPlus",
   "BasePath": "_content/BloqPlus",
   "Mode": "Default",
@@ -1341,6 +1341,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\register\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\register\\fonts\\fontawesome-webfont.svg",
+      "SourceId": "BloqPlus",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\",
+      "BasePath": "_content/BloqPlus",
+      "RelativePath": "register/fonts/fontawesome-webfont.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\register\\fonts\\fontawesome-webfont.svg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\register\\fonts\\fontawesome-webfont.ttf",
