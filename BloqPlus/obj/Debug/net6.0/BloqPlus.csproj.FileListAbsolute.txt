@@ -271,3 +271,6 @@ C:\Users\user\source\repos\BloqPlus\BloqPlus\bin\Debug\net6.0\runtimes\win\lib\n
 C:\Users\user\source\repos\BloqPlus\BloqPlus\obj\Debug\net6.0\BloqPlus.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\source\repos\BloqPlus\BloqPlus\obj\Debug\net6.0\BloqPlus.RazorAssemblyInfo.cache
 C:\Users\user\source\repos\BloqPlus\BloqPlus\obj\Debug\net6.0\BloqPlus.RazorAssemblyInfo.cs
+C:\Users\user\source\repos\BloqPlus\BloqPlus\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\user\source\repos\BloqPlus\BloqPlus\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\user\source\repos\BloqPlus\BloqPlus\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

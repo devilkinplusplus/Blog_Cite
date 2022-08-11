@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "lL0V/lIA6kGKTY7ebrS+u99gUW1FjOdXkwVbGz6xj3J7qVbaOZu0/5BDtb31l7ql3MnrIl3Z08G16/VUXXVNVg==",
+  "dgSpecHash": "sb612kBTuJmpqgsmujVikT8UywcjkhR0sYu8BgPUO3L6VkagI5MXvQA2QHPIJga6pS+uF0ESxVYciEY31ND6nw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\BloqPlus\\EntityLayer\\EntityLayer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
