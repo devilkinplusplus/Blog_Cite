@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BloqPlus.Areas.Login.Controllers
 {
     [Area("Login")]
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
         WriterManager wm = new WriterManager(new EfWriterRepository());
