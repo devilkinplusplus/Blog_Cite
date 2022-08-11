@@ -1,0 +1,12 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Category>
+
+<div class="project" style="font-size:13px;">
+    <h4>Kateqoriyalar</h4>
+    <label></label>
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li><a href="#">@item.CategoryName</a></li>
+        </ul>
+    }
+</div>

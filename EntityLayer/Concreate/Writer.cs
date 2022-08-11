@@ -22,5 +22,6 @@ namespace EntityLayer.Concreate
         [Compare("WriterPassword",ErrorMessage ="Şifrəniz uyğun gəlmir")]
         public string WriterConfirmPassword { get; set; }
         public bool WriterStatus { get; set; }
+        public List<Blog> Blogs { get; set; }
     }
 }

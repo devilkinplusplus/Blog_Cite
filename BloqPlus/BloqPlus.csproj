@@ -30,6 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Blog\Data\" />
+    <Folder Include="Areas\Blog\Models\" />
     <Folder Include="Areas\Login\Data\" />
     <Folder Include="Areas\Login\Models\" />
     <Folder Include="Areas\Login\Views\Shared\" />

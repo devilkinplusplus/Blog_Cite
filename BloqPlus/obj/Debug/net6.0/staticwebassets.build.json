@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LxOWlOs9oPJX8jxbfubFVYzLCTrChaXsRYx7i/r4aH8=",
+  "Hash": "Kfq3Z4+wyAMEhgXbmmrcWmcf2cZfXdz6tVbgYs0vJxs=",
   "Source": "BloqPlus",
   "BasePath": "_content/BloqPlus",
   "Mode": "Default",
@@ -1545,6 +1545,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\web\\images\\banner.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\web\\images\\blog.png",
+      "SourceId": "BloqPlus",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\",
+      "BasePath": "_content/BloqPlus",
+      "RelativePath": "web/images/blog.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\web\\images\\blog.png"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\web\\images\\icon3.png",
