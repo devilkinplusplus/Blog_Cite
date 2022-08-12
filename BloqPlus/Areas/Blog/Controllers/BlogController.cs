@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using BusinessLayer.Concreate;
+using DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BloqPlus.Areas.Blog.Controllers
@@ -7,9 +9,11 @@ namespace BloqPlus.Areas.Blog.Controllers
     [AllowAnonymous]
     public class BlogController : Controller
     {
+        BlogManager bm = new BlogManager(new EfBlogRepository());
         public IActionResult Index()
         {
-            return View();
+            var values = bm.TGetList();
+            return View(values);
         }
     }
 }

@@ -1,11 +1,12 @@
-﻿@{
-    ViewData["Title"] = "Index";
+﻿@model IEnumerable<EntityLayer.Concreate.Blog>
+@{
     Layout = "~/Areas/Blog/Views/Shared/_BlogLayout.cshtml";
 }
 
 <div class="row">
     <!--left-->
     <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+        @foreach(var item in Model.TakeLast(1)){
         <div class="blog-grid-top">
             <div class="b-grid-top">
                 <div class="blog_info_left_grid">
@@ -17,17 +18,14 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <i class="far fa-calendar-alt"></i> FEB 15,2018
+                                <i class="far fa-calendar-alt"></i> 
+                                @item.BlogCreateDate.ToString("dd-MMM-yyyy")
                             </a>
                         </li>
-                        <li class="mx-2">
-                            <a href="#">
-                                <i class="far fa-thumbs-up"></i> 201 Likes
-                            </a>
-                        </li>
+                      
                         <li>
                             <a href="#">
-                                <i class="far fa-comment"></i> 15 Comments
+                                <i class="far fa-comment"></i> 0 şərh
                             </a>
                         </li>
 
@@ -36,15 +34,14 @@
             </div>
 
             <h3>
-                <a href="single.html">Amet consectetur adipisicing </a>
+                <a href="single.html">@item.BlogTitle </a>
             </h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-                aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
-                aute irudre dolor in elit sed uta labore dolore reprehender
+                @item.BlogContent
             </p>
-            <a href="single.html" class="btn btn-primary read-m">Read More</a>
+            <a href="single.html" class="btn btn-primary read-m">Davamını Oxu</a>
         </div>
+        }
         <!--//silder-->
     </div>
     <!--//left-->
@@ -52,7 +49,7 @@
     <aside class="col-lg-4 agileits-w3ls-right-blog-con text-left">
         <div class="tech-btm">
             <h4>Son Postlar</h4>
-
+            @foreach(var item in Model){
             <div class="blog-grids row mb-3">
                 <div class="col-md-5 blog-grid-left">
                     <a href="single.html">
@@ -62,17 +59,20 @@
                 <div class="col-md-7 blog-grid-right">
 
                     <h5>
-                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
+                        <a href="single.html">
+                            @item.BlogTitle    
+                        </a>
                     </h5>
                     <div class="sub-meta">
                         <span>
-                            <i class="far fa-clock"></i> 20 Jan, 2018
+                            <i class="far fa-clock"></i> 
+                            @item.BlogCreateDate.ToString("dd-MMM-yyyy")
                         </span>
                     </div>
                 </div>
 
             </div>
-         
+         }
 
         </div>
 
