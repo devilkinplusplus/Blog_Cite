@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concreate.Blog
+@{
+    ViewData["Title"] = "UpdateBlog";
+    Layout = "~/Areas/Blog/Views/Shared/_ProfileLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("UpdateBlog", "Profile", FormMethod.Post,
+        new{@enctype = "multipart/form-data"}))
+{
+    @Html.Label("Başlıq")
+    @Html.TextBoxFor(x=>x.BlogTitle,new {@class="form-control" , autocomplete="off"})
+    @Html.ValidationMessageFor(x=>x.BlogTitle,"",new {@class="text-danger"})
+    <br />
+    
+    @Html.Label("Kateqoriya")
+    @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.v,new {@class="form-control" })
+    @Html.ValidationMessageFor(x=>x.CategoryID,"",new {@class="text-danger"})
+    <br />
+
+    @Html.Label("Şəkil")
+    <input class="form-control" type="file"  name="BlogImage" />
+    @Html.ValidationMessageFor(x=>x.BlogImage,"",new {@class="text-danger"})
+    
+    <br />
+    @Html.Label("Məzmun")
+    @Html.TextAreaFor(x=>x.BlogContent,4,10,new {@class="form-control" , autocomplete="off"})
+    @Html.ValidationMessageFor(x=>x.BlogContent,"",new {@class="text-danger"})
+    
+    <br />
+    <button type="submit" class="btn btn-warning">Yadda saxla</button>
+}
+

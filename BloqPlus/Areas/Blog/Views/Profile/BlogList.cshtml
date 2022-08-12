@@ -1,0 +1,80 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Blog>
+@{
+    ViewData["Title"] = "BlogList";
+    Layout = "~/Areas/Blog/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="table-agile-info">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Mənim Bloqlarım
+        </div>
+        <div>
+            <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                <thead>
+                    <tr>
+                        <th>Başlıq</th>
+                        <th>Kateqoriya</th>
+                        <th data-breakpoints="xs">Status</th>
+                        <th data-breakpoints="xs sm md" data-title="DOB">Yazılma tarixi</th>
+                        <th>Güncəllə</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr data-expanded="true">
+                            <td>@item.BlogTitle</td>
+                            <td>
+                                <span class="btn btn-primary btn-sm">
+                                    @item.Category.CategoryName
+                                </span>
+                            </td>
+                            <td>
+                                @if (@item.BlogStatus)
+                                {
+                                    <span class="btn btn-success btn-sm">
+                                        Aktiv
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="btn btn-danger btn-sm">
+                                        Passiv
+                                    </span>
+                                }
+                            </td>
+                            <td>@item.BlogCreateDate.ToString("dd-MMM-yyyy")</td>
+                            <td>
+                                <a href="/Blog/Profile/UpdateBlog/@item.BlogID" 
+                                class="btn btn-warning btn-sm">
+                                    Güncəllə
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-danger btn-sm">
+                                    Sil
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

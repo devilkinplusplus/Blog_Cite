@@ -28,7 +28,7 @@ namespace BloqPlus.Areas.Blog.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddBlog(EntityLayer.Concreate.BlogWithImg newBlog)
+        public IActionResult AddBlog(BlogWithImg newBlog)
         {
             EntityLayer.Concreate.Blog b = new EntityLayer.Concreate.Blog();
 
@@ -67,6 +67,14 @@ namespace BloqPlus.Areas.Blog.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult BlogList(int id)
+        {
+            var sessionUser = JsonConvert.DeserializeObject<EntityLayer.Concreate.Blog>(HttpContext.Session.GetString("username"));
+            id = sessionUser.WriterId;
+            var values = bm.GetBlogsWithCategoryByWriter(id);
+            return View(values);
+        }
+
         private void DropdownCategoryValues()
         {
             Context con = new Context();
@@ -77,6 +85,20 @@ namespace BloqPlus.Areas.Blog.Controllers
                                                Value = x.CategoryID.ToString()
                                            }).ToList();
             ViewBag.v = values;
+        }
+
+        [HttpGet]
+        public IActionResult UpdateBlog(int id)
+        {
+            DropdownCategoryValues();
+            var data = bm.TGetById(id);
+            return View(data);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateBlog(BlogWithImg blog)
+        {
+            return RedirectToAction("Index");
         }
     }
 }

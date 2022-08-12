@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pYTQQ4SVKk8mSmY6LhRZQGqSm4Pys5Lw8/D+113ETlE=",
+  "Hash": "ta7BMnsMJyQ5dwulUKDCYwmYCVUtdlR8sEmmgnAHbRU=",
   "Source": "BloqPlus",
   "BasePath": "_content/BloqPlus",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\BlogImage\\76ff7041-d071-475a-8b2b-99eb871330d3.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\BlogImage\\7e8a7a32-c607-4672-a89c-9fd31c7ffac4.jpg",
+      "SourceId": "BloqPlus",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\",
+      "BasePath": "_content/BloqPlus",
+      "RelativePath": "BlogImage/7e8a7a32-c607-4672-a89c-9fd31c7ffac4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\BlogImage\\7e8a7a32-c607-4672-a89c-9fd31c7ffac4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\BlogImage\\bdf556a4-4521-46fa-81d9-f9ebb7eb47e6.jpg",
+      "SourceId": "BloqPlus",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\",
+      "BasePath": "_content/BloqPlus",
+      "RelativePath": "BlogImage/bdf556a4-4521-46fa-81d9-f9ebb7eb47e6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\BlogImage\\bdf556a4-4521-46fa-81d9-f9ebb7eb47e6.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\css\\site.css",
