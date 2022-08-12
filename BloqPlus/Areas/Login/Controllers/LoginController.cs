@@ -3,6 +3,7 @@ using EntityLayer.Concreate;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Security.Claims;
 
 namespace BloqPlus.Areas.Login.Controllers
@@ -30,7 +31,9 @@ namespace BloqPlus.Areas.Login.Controllers
                 var useridentity = new ClaimsIdentity(claims, "a");
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(useridentity);
                 await HttpContext.SignInAsync(claimsPrincipal);
-                return RedirectToAction("Index","Register");
+
+                HttpContext.Session.SetString("username", JsonConvert.SerializeObject(datavalue));
+                return RedirectToAction("Index", "Blog",new { area="Blog" });
             }
             else
                 return View();

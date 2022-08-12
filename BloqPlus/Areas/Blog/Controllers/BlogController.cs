@@ -15,5 +15,7 @@ namespace BloqPlus.Areas.Blog.Controllers
             var values = bm.TGetList();
             return View(values);
         }
+
+
     }
 }
