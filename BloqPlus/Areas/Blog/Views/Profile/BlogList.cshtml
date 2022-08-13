@@ -41,28 +41,33 @@
                                 </span>
                             </td>
                             <td>
-                                @if (@item.BlogStatus)
+                                @if (item.BlogStatus)
                                 {
-                                    <span class="btn btn-success btn-sm">
+                                    <a href="/Blog/Profile/CheckStatus/@item.BlogID"
+                                    class="btn btn-success btn-sm">
                                         Aktiv
-                                    </span>
+                                    </a>
                                 }
                                 else
                                 {
-                                    <span class="btn btn-danger btn-sm">
+                                    <a href="/Blog/Profile/CheckStatus/@item.BlogID"
+                                    class="btn btn-danger btn-sm">
                                         Passiv
-                                    </span>
+                                    </a>
                                 }
                             </td>
                             <td>@item.BlogCreateDate.ToString("dd-MMM-yyyy")</td>
                             <td>
-                                <a href="/Blog/Profile/UpdateBlog/@item.BlogID" 
-                                class="btn btn-warning btn-sm">
+                                <a href="/Blog/Profile/UpdateBlog/@item.BlogID"
+                               class="btn btn-warning btn-sm">
                                     Güncəllə
                                 </a>
                             </td>
                             <td>
-                                <a href="#" class="btn btn-danger btn-sm">
+                                <a 
+                                data-id="@item.BlogID"
+                                class="btn btn-danger btn-sm"
+                                onclick="return functionConfirm(this)">
                                     Sil
                                 </a>
                             </td>
@@ -76,5 +81,39 @@
 </div>
 
 
+@section Scripts{
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function functionConfirm(event) {
+        swal({
+            title: 'Are you sure?',
+            text: "You will not be able to recover this item!",
+            type: 'warning',
+            showCancelButton: true,
+            cancelButtonText: 'No',
+            cancelButtonClass: 'btn btn-danger',
+            showConfirmButton: true,
+            confirmButtonText: 'Yes',
+            confirmButtonClass: 'btn btn-success'
+            }, function (isConfirm) {
+                var id = $(event).data('id');
+                if (!isConfirm) return;
+                $.ajax({
+                    type: "Get",
+                    data:{id:id},
+                    url: '/Blog/Profile/DeleteBlog/'+id,
+                    success: function () {
+                        location.reload(true);
+                        },
+                    error: function (req, status, error) {
+                        console.log(msg);
+                    }
+                });
+        });
+    }
 
-
+</script>
+}

@@ -6,7 +6,7 @@
 <div class="row">
     <!--left-->
     <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
-        @foreach(var item in Model.TakeLast(1)){
+        @foreach(var item in Model.Where(x=>x.BlogStatus==true).TakeLast(1)){
         <div class="blog-grid-top">
             <div class="b-grid-top">
                 <div class="blog_info_left_grid">
@@ -50,7 +50,7 @@
     <aside class="col-lg-4 agileits-w3ls-right-blog-con text-left">
         <div class="tech-btm">
             <h4>Son Postlar</h4>
-            @foreach(var item in Model.TakeLast(6)){
+            @foreach(var item in Model.Where(x=>x.BlogStatus==true).TakeLast(5)){
             <div class="blog-grids row mb-3">
                 <div class="col-md-5 blog-grid-left">
                     <a href="single.html">

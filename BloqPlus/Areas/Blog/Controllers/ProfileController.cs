@@ -56,13 +56,10 @@ namespace BloqPlus.Areas.Blog.Controllers
             b.CategoryID = newBlog.CategoryID;
             if (!result.IsValid)
             {
-                foreach (var item in result.Errors)
-                {
-                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
-                }
+                TempData["NotEmpty"] = "Xanalari doldurun";
                 return RedirectToAction("AddBlog");
             }
- 
+
             bm.TAdd(b);
             return RedirectToAction("Index");
         }
@@ -92,13 +89,62 @@ namespace BloqPlus.Areas.Blog.Controllers
         {
             DropdownCategoryValues();
             var data = bm.TGetById(id);
+            data.BlogStatus = true;
+            ViewData["img"] = data.BlogImage;
             return View(data);
         }
 
         [HttpPost]
-        public IActionResult UpdateBlog(BlogWithImg blog)
+        public IActionResult UpdateBlog(BlogWithImg blog, int id)
         {
+            var data = bm.TGetById(id);
+
+            BlogValidator validations = new BlogValidator();
+            ValidationResult result = validations.Validate(blog);
+            if (blog.BlogImage != null)
+            {
+                var extension = Path.GetExtension(blog.BlogImage.FileName);
+                var newimagename = Guid.NewGuid() + extension;
+                var location = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot/BlogImage", newimagename);
+                var stream = new FileStream(location, FileMode.Create);
+                blog.BlogImage.CopyTo(stream);
+                data.BlogImage = newimagename;
+            }
+            data.BlogTitle = blog.BlogTitle;
+            data.BlogContent = blog.BlogContent;
+            data.BlogStatus = true;
+            data.CategoryID = blog.CategoryID;
+            if (!result.IsValid)
+            {
+                TempData["NotEmpty"] = "Xanalari doldurun";
+                return RedirectToAction("UpdateBlog");
+            }
+
+            bm.TUpdate(data);
+            return RedirectToAction("BlogList");
+        }
+
+        public IActionResult DeleteBlog(int id)
+        {
+            var data = bm.TGetById(id);
+            bm.TDelete(data);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult CheckStatus(int id)
+        {
+            var data = bm.TGetById(id);
+            if (data.BlogStatus)
+            {
+                data.BlogStatus = false;
+            }
+            else
+            {
+                data.BlogStatus = true;
+            }
+            bm.TUpdate(data);
+            return RedirectToAction("BlogList");
         }
     }
 }
