@@ -24,7 +24,9 @@ namespace BloqPlus.Areas.Blog.Controllers
 
         public IActionResult BlogReadAll(int id)
         {
+            var one = bm.TGetById(id);
             var data = bm.GetBlogByIdWithCategory(id);
+            ViewBag.on = one.WriterId;
             return View(data);
         }
 

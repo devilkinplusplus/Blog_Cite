@@ -1,0 +1,30 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Blog>
+
+<div class="tech-btm">
+    <h4>Yazıçının diger bloqları</h4>
+
+    <div class="blog-grids row mb-3">
+        @foreach(var item in Model){
+        <div class="col-md-5 blog-grid-left">
+            <a href="/Blog/Blog/BlogReadAll/@item.BlogID">
+                <img src="/BlogImage/@item.BlogImage" class="img-fluid" alt="">
+            </a>
+        </div>
+        <div class="col-md-7 blog-grid-right">
+
+            <h5>
+                <a href="/Blog/Blog/BlogReadAll/@item.BlogID">
+                    @item.BlogTitle
+                </a>
+            </h5>
+            <div class="sub-meta">
+                <span>
+                    <i class="far fa-clock"></i> 
+                    @item.BlogCreateDate.ToString("dd-MMM-yyyy")
+                </span>
+            </div>
+        </div>
+        }
+    </div>
+
+</div>

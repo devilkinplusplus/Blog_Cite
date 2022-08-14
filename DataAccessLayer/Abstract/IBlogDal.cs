@@ -12,5 +12,6 @@ namespace DataAccessLayer.Abstract
         List<Blog> GetBlogsWithCategoryByWriter(int id);
         List<Blog> GetBlogsWithCategory();
         List<Blog> GetBlogByIdWithCategory(int id);
+        List<Blog> GetOtherBlogsByWriter(int id);
     }
 }
