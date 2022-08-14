@@ -16,6 +16,17 @@ namespace BloqPlus.Areas.Blog.Controllers
             return View(values);
         }
 
+        public IActionResult AllBlogs()
+        {
+            var values = bm.GetBlogsWithCategory();
+            return View(values);
+        }
+
+        public IActionResult BlogReadAll(int id)
+        {
+            var data = bm.GetBlogByIdWithCategory(id);
+            return View(data);
+        }
 
     }
 }

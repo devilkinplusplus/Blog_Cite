@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\BloqPlus\BloqPlus
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Blog/AllBlogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xCbG9nXEFsbEJsb2dzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Blog/BlogReadAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xCbG9nXEJsb2dSZWFkQWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xCbG9nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

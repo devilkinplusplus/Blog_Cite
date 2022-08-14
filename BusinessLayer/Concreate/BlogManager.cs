@@ -17,9 +17,21 @@ namespace BusinessLayer.Concreate
             _blogDal = (IBlogDal)genericDal;
         }
 
+        public List<Blog> GetBlogByIdWithCategory(int id)
+        {
+            return _blogDal.GetBlogByIdWithCategory(id);
+        }
+
+        public List<Blog> GetBlogsWithCategory()
+        {
+            return _blogDal.GetBlogsWithCategory();
+        }
+
         public List<Blog> GetBlogsWithCategoryByWriter(int id)
         {
             return _blogDal.GetBlogsWithCategoryByWriter(id);
         }
+
+
     }
 }

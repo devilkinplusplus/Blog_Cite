@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +14,15 @@ builder.Services.AddControllers(config =>
                      .Build();
     config.Filters.Add(new AuthorizeFilter(policy));
 });
+
+
 builder.Services.AddSession();
-builder.Services.AddMvc();
+
+builder.Services.AddMvc().AddRazorPagesOptions(option =>
+{
+    option.Conventions.AddPageRoute("/Blog/Blog/Index","");
+});
+
 builder.Services.AddAuthentication(
         CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(x =>
@@ -32,6 +40,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 app.UseSession();
 app.UseRouting();
 
@@ -39,16 +48,15 @@ app.UseRouting();
 app.UseAuthorization();
 app.UseAuthentication();
 
+
 app.UseEndpoints(endpoints =>
 {
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapControllerRoute(
-          name: "areas",
-          pattern: "{area:exists}/{controller=Blog}/{action=Index}/{id?}"
-        );
-    });
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Blog}/{action=Index}/{id?}"
+    );
 });
+
 app.MapRazorPages();
 
 app.Run();

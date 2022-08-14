@@ -98,7 +98,8 @@ namespace BloqPlus.Areas.Blog.Controllers
         public IActionResult UpdateBlog(BlogWithImg blog, int id)
         {
             var data = bm.TGetById(id);
-
+            
+        
             BlogValidator validations = new BlogValidator();
             ValidationResult result = validations.Validate(blog);
             if (blog.BlogImage != null)
@@ -111,6 +112,7 @@ namespace BloqPlus.Areas.Blog.Controllers
                 blog.BlogImage.CopyTo(stream);
                 data.BlogImage = newimagename;
             }
+            
             data.BlogTitle = blog.BlogTitle;
             data.BlogContent = blog.BlogContent;
             data.BlogStatus = true;

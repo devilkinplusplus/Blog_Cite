@@ -21,7 +21,7 @@ namespace BusinessLayer.Validations
             RuleFor(x => x.BlogContent).MaximumLength(255).WithMessage("Karakter limitini keçdiniz");
 
             //Image
-            RuleFor(x => x.BlogImage).NotEmpty().WithMessage("Şəkil lazımdır");
+            //RuleFor(x => x.BlogImage).NotEmpty().WithMessage("Şəkil lazımdır");
             RuleFor(x => x.CategoryID).NotEmpty().WithMessage("Kateqoriya seçin");
         }
     }

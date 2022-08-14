@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Concreate;
 using EntityLayer.Concreate;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -37,6 +38,13 @@ namespace BloqPlus.Areas.Login.Controllers
             }
             else
                 return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> LogOut()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Blog", new {area="Blog"});
         }
     }
 }
