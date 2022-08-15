@@ -72,6 +72,7 @@ namespace BloqPlus.Areas.Blog.Controllers
             return View(values);
         }
 
+        [NonAction]
         private void DropdownCategoryValues()
         {
             Context con = new Context();

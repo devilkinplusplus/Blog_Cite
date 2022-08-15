@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Xc0/3PtFSlWtt9uw35C25C6CgsH/BzGZju8ItMswK4Q=",
+  "Hash": "mgdnktqVnCoSZm4TyHQ2o8btH5+y9msGGQtKPbp2MIM=",
   "Source": "BloqPlus",
   "BasePath": "_content/BloqPlus",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\BlogImage\\0b469bca-b352-472b-a1a3-fe140958c426.jpg",
+      "SourceId": "BloqPlus",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\",
+      "BasePath": "_content/BloqPlus",
+      "RelativePath": "BlogImage/0b469bca-b352-472b-a1a3-fe140958c426.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\BlogImage\\0b469bca-b352-472b-a1a3-fe140958c426.jpg"
+    },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\BloqPlus\\BloqPlus\\wwwroot\\BlogImage\\0ba5d045-bb51-4e45-a290-c4cb1ee5d740.png",
       "SourceId": "BloqPlus",

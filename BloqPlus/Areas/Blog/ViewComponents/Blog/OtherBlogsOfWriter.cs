@@ -10,7 +10,7 @@ namespace BloqPlus.Areas.Blog.ViewComponents.Blog
         BlogManager bm = new BlogManager(new EfBlogRepository());
         public IViewComponentResult Invoke(int id)
         {
-            var rslt = bm.GetOtherBlogsByWriter(id).TakeLast(2);
+            var rslt = bm.GetOtherBlogsByWriter(id).TakeLast(5);
             return View(rslt);
         }
     }
