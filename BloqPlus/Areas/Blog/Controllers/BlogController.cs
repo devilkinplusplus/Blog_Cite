@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concreate;
+using X.PagedList;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,10 +17,10 @@ namespace BloqPlus.Areas.Blog.Controllers
             return View(values);
         }
 
-        public IActionResult AllBlogs()
+        public IActionResult AllBlogs(int page=1)
         {
             var values = bm.GetBlogsWithCategory();
-            return View(values);
+            return View(values.ToPagedList(page,9));
         }
 
         public IActionResult BlogReadAll(int id)

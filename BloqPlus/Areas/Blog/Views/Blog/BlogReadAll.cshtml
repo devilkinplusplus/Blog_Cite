@@ -37,14 +37,12 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="far fa-comment"></i> 0 Comments
+                                            <i class="far fa-comment"></i> 0 Şərh
                                         </a>
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
-
                         <h3>
                             <a href="single.html">
                                 @item.BlogTitle
@@ -56,9 +54,7 @@
                     </div>
                 }
 
-
                 @await Component.InvokeAsync("CommentsByBlog",new {id=@ViewBag.bl})
-
                 @await Html.PartialAsync("~/Areas/Blog/Views/Comment/AddComment.cshtml")
             </div>
 
