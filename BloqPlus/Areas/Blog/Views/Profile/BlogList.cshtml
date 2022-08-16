@@ -89,14 +89,14 @@
 <script>
     function functionConfirm(event) {
         swal({
-            title: 'Are you sure?',
-            text: "You will not be able to recover this item!",
+            title: 'Silmek istediyinize eminsiniz?',
+            text: "Sildikden sonra bu yazını qaytara bilmeyeceksiniz.",
             type: 'warning',
             showCancelButton: true,
-            cancelButtonText: 'No',
+            cancelButtonText: 'Xeyr',
             cancelButtonClass: 'btn btn-danger',
             showConfirmButton: true,
-            confirmButtonText: 'Yes',
+            confirmButtonText: 'Beli',
             confirmButtonClass: 'btn btn-success'
             }, function (isConfirm) {
                 var id = $(event).data('id');

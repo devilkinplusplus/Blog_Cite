@@ -28,10 +28,10 @@ namespace BloqPlus.Areas.Blog.Controllers
             com.CommentStatus = true;
             com.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             com.WriterId = sessionUser.WriterId;
-            com.BlogID = 1;
+            com.BlogID = 2;
 
             cm.TAdd(com);
-            return RedirectToAction("Index","Blog");
+            return PartialView();
         }
     }
 }
