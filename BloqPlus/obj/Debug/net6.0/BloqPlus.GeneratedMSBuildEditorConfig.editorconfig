@@ -27,6 +27,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xCbG9nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Comment/AddComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xDb21tZW50XEFkZENvbW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Profile/AddBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xQcm9maWxlXEFkZEJsb2cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -43,12 +47,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xQcm9maWxlXFVwZGF0ZUJsb2cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/AddComment/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xBZGRDb21tZW50XERlZmF1bHQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/CommentList/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xDb21tZW50TGlzdFxEZWZhdWx0LmNzaHRtbA==
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/CommentsByBlog/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xDb21tZW50c0J5QmxvZ1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/GetCategories/Default.cshtml]

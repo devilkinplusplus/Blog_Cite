@@ -26,7 +26,9 @@ namespace BloqPlus.Areas.Blog.Controllers
         {
             var one = bm.TGetById(id);
             var data = bm.GetBlogByIdWithCategory(id);
+            //For other operations
             ViewBag.on = one.WriterId;
+            ViewBag.bl = one.BlogID;
             return View(data);
         }
 

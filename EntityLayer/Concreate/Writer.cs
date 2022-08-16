@@ -23,5 +23,6 @@ namespace EntityLayer.Concreate
         public string WriterConfirmPassword { get; set; }
         public bool WriterStatus { get; set; }
         public List<Blog> Blogs { get; set; }
+        public List<Comment> Comments{ get; set; }
     }
 }

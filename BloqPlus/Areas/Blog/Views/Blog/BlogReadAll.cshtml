@@ -57,9 +57,9 @@
                 }
 
 
-                @await Component.InvokeAsync("CommentList")
+                @await Component.InvokeAsync("CommentsByBlog",new {id=@ViewBag.bl})
 
-                @await Component.InvokeAsync("AddComment")
+                @await Html.PartialAsync("~/Areas/Blog/Views/Comment/AddComment.cshtml")
             </div>
 
             <!--//left-->
