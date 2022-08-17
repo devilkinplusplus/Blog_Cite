@@ -110,6 +110,37 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concreate.Contact", b =>
+                {
+                    b.Property<int>("ContactID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ContactMail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactMessage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ContactStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ContactSubject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ContactID");
+
+                    b.ToTable("Contacts");
+                });
+
             modelBuilder.Entity("EntityLayer.Concreate.News", b =>
                 {
                     b.Property<int>("NewsID")

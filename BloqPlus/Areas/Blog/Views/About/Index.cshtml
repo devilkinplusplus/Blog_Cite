@@ -1,0 +1,157 @@
+﻿@{
+    Layout = "~/Areas/Blog/Views/Shared/_BlogLayout.cshtml";
+}
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Haqqımızda</h3>
+        <div class="row inner-sec">
+            <!--left-->
+            <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+                <div class="blog-grid-top">
+
+                    <div class="blog_info_left_grid">
+                        <a href="single.html">
+                            <img src="~/webBlog/images/b5.jpg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <h3>
+                        Saytın quruluşu haqqında
+                    </h3>
+                    <p>
+                       Gördüyünüz bu saytın qurulmasına 7 avqust 2022-ci il tarixində 
+                       başlanıldı və bu yazını yazarkən də saytın qurulması 
+                       davam etməkdədir. Saytımızda öz məqalələrinizi yaza , digər
+                       yazıçılarımızın məqalələrini oxuya , onlara şərh yaza bilərsiniz.
+                    </p>
+                   
+                </div>
+               <div style="text-align:center;">
+                      <h4 class="tittle">İstifadə edilən texnologiyalar</h4>
+               </div>
+                <div class="row">
+                    <!--Core-->
+                    <div class="col-md-6 card mt-3">
+                        <img class="card-img-top" style="height:270px;width:360px;"
+                        src="~/webBlog/aboutImages/core.png"
+                        alt="Card-image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Asp.Net Core 6
+                                </h5>
+                            <p class="card-text mb-3">
+                                Bu web saytın təməli .Net 6 ilə hazırlanmışdır. Saytın
+                                quruluşunda .Net Core-un nemətlərindən olduqca istifadə 
+                                edilməklə yanaşı Solid prinsipləri də gözlənilmişdir.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <!--Js-->
+                    <div class="col-md-6 card mt-3">
+                        <img class="card-img-top" style="height:270px;width:360px;"
+                        src="~/webBlog/aboutImages/js.jpg"
+                        alt="Card-image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                JavaScript 
+                           </h5>
+                            <p class="card-text mb-3">
+                                Saytda müəyyən əməliyyatlar üçün script fayllarına
+                                ,və bəzi javascript kitabxanalarına ehtiyac duyuldu.
+                                Web Sayt quruluşunda Javascript əvəzedilməz kimi birşeydir.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Bootstrap-->
+                    <div class="col-md-6 card mt-3">
+                        <img class="card-img-top" style="height:270px;width:360px;"
+                        src="~/webBlog/aboutImages/bootstrap.png" 
+                        alt="Card-image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Bootstrap 5
+                            </h5>
+                            <p class="card-text mb-3">
+                                Front tərəfdə bəzi dəyişikliklər üçün bootstrap çox faydalı
+                                oldu. Xüsusilə mənim kimi CSS ilə çalışmağı xoşlamayanlar
+                                üçün bootstrap həm rahat , həm də effektivdir.
+                            </p>
+                        </div>
+                    </div>
+                    <!--StackOverFlow-->
+                    <div class="col-md-6 card mt-3">
+                        <img class="card-img-top" style="height:270px;width:360px;"
+                        src="~/webBlog/aboutImages/stack.png"
+                        alt="Card-image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                StackOverFlow
+                                </h5>
+                            <p class="card-text mb-3">
+                                Hər bir proqramçın yardımçısı ,hər xətaya cavab olan ,
+                                proqramçılar üçün əvəzedilməz bir sayt.Təbi ki , bu saytın
+                                hazırlanmasında da öz töhvəsi oldu.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//left-->
+            <!--right-->
+            <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+                <div class="right-blog-info text-left">
+                    <div class="tech-btm">
+                        <img src="~/webBlog/images/banner1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="tech-btm">
+                        <h4>Yeniliklərdən xəbərdar olun</h4>
+                       @await Html.PartialAsync("~/Areas/Blog/Views/Subs/Subscribe.cshtml")
+                    </div>
+
+                    <!--Social Media-->
+                    <div class="tech-btm widget_social">
+                        <h4>Sosial Media Hesablarımız</h4>
+                        <ul>
+
+                            <li>
+                                <a class="twitter" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                    <span class="count">317K</span> Twitter Followers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="facebook" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span class="count">218k</span> Facebook Followers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dribble" href="#">
+                                    <i class="fab fa-instagram"></i>
+
+                                    <span class="count">215k</span> Instagram Followers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="twitter" href="#">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span class="count">190k</span> Linkedin Followers
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tech-btm">
+                        <h4>Ən Son Yazılanlar</h4>
+                        @await Component.InvokeAsync("GetLastBlog")
+                    </div>
+                </div>
+
+            </aside>
+            <!--//right-->
+        </div>
+    </div>
+</section>
+
