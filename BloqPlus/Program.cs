@@ -18,9 +18,10 @@ builder.Services.AddControllers(config =>
 
 builder.Services.AddSession();
 
-builder.Services.AddMvc().AddRazorPagesOptions(option =>
+builder.Services.AddMvc();
+builder.Services.AddMvc().AddRazorPagesOptions(options =>
 {
-    option.Conventions.AddPageRoute("/Blog/Blog/Index","");
+    options.Conventions.AddPageRoute("/Blog/Blog/Index", "");
 });
 
 builder.Services.AddAuthentication(

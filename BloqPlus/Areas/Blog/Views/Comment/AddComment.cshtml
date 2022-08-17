@@ -2,10 +2,10 @@
     <h4>Şərh yazın</h4>
     <div class="comment-bottom">
         <form method="post">
-
             <textarea id="txt" class="form-control" name="CommentContent"
-                      placeholder="Şərhiniz..." required=""></textarea>
-            
+                      placeholder="Şərhiniz..." required="">
+            </textarea>
+
             <button type="submit" id="btn" class="btn btn-primary submit">
                 Göndər
             </button>
@@ -19,16 +19,17 @@
 
 <script type="text/javascript">
     $("#btn").click(function(){
+        var id = @ViewBag.bl;
         let values = {
             CommentContent: $("#txt").val()
+            //BlogID:$("#blgid").val()
         };
         $.ajax({
             type:"post",
-            url:"/Blog/Comment/AddComment/",
+            url:"/Blog/Comment/AddComment/"+id,
             data:values,
             succes:function(func){
                 let result = jQuery.parseJSON(func)
-             //   location.reload(true);
             }
         })
     })

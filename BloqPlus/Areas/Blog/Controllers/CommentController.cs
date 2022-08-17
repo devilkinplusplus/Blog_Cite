@@ -20,7 +20,7 @@ namespace BloqPlus.Areas.Blog.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddComment(Comment com)
+        public IActionResult AddComment(int id,Comment com)
         {
             //Session
             var sessionUser = JsonConvert.DeserializeObject<Writer>(HttpContext.Session.GetString("username"));
@@ -28,8 +28,8 @@ namespace BloqPlus.Areas.Blog.Controllers
             com.CommentStatus = true;
             com.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             com.WriterId = sessionUser.WriterId;
-            com.BlogID = 2;
-
+            com.BlogID = id;
+            ViewBag.v = id;
             cm.TAdd(com);
             return PartialView();
         }

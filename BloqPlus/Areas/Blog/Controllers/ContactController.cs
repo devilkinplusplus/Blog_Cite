@@ -29,7 +29,6 @@ namespace BloqPlus.Areas.Blog.Controllers
 
             if (!result.IsValid)
             {
-                TempData["Error"] = "Opps mesajınızı yeniden yoxlayın";
                 return RedirectToAction("Index");
             }
 
