@@ -1,0 +1,103 @@
+﻿@model IEnumerable<EntityLayer.Concreate.Blog>
+
+@{
+    ViewData["Title"] = "BlogList";
+    Layout = "~/Areas/Blog/Views/Shared/_AdminLayout_.cshtml";
+}
+
+
+<div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+    <div class="panel-body no-padding">
+        <table class="table table-striped">
+            <thead>
+                <tr class="warning">
+                    <th>Başlıq</th>
+                    <th>Kateqoriya</th>
+                    <th>Status</th>
+                    <th>Yazılma tarixi</th>
+                    <th>Güncəllə</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr data-expanded="true">
+                        <td>@item.BlogTitle</td>
+                        <td>
+                            <span class="btn btn-primary btn-sm">
+                                @item.Category.CategoryName
+                            </span>
+                        </td>
+                        <td>
+                            @if (item.BlogStatus)
+                            {
+                                <a href="/Blog/Admin/CheckStatus/@item.BlogID"
+                           class="btn btn-success btn-sm">
+                                    Aktiv
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="/Blog/Admin/CheckStatus/@item.BlogID"
+                           class="btn btn-danger btn-sm">
+                                    Passiv
+                                </a>
+                            }
+                        </td>
+                        <td>@item.BlogCreateDate.ToString("dd-MMM-yyyy")</td>
+                        <td>
+                            <a href="/Blog/Admin/UpdateBlog/@item.BlogID"
+                           class="btn btn-warning btn-sm">
+                                Güncəllə
+                            </a>
+                        </td>
+                        <td>
+                            <a data-id="@item.BlogID"
+                           class="btn btn-danger btn-sm"
+                           onclick="return functionConfirm(this)">
+                                Sil
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function functionConfirm(event) {
+        swal({
+            title: 'Silmek istediyinize eminsiniz?',
+            text: "Sildikden sonra bu yazını qaytara bilmeyeceksiniz.",
+            type: 'warning',
+            showCancelButton: true,
+            cancelButtonText: 'Xeyr',
+            cancelButtonClass: 'btn btn-danger',
+            showConfirmButton: true,
+            confirmButtonText: 'Beli',
+            confirmButtonClass: 'btn btn-success'
+            }, function (isConfirm) {
+                var id = $(event).data('id');
+                if (!isConfirm) return;
+                $.ajax({
+                    type: "Get",
+                    data:{id},
+                    url: '/Blog/Admin/DeleteBlog/'+id,
+                    success: function () {
+                        location.reload(true);
+                        },
+                    error: function (req, status, error) {
+                        console.log(msg);
+                    }
+                });
+        });
+    }
+
+</script>

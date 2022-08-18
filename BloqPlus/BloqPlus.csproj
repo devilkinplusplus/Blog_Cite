@@ -37,7 +37,6 @@
     <Folder Include="Areas\Login\Data\" />
     <Folder Include="Areas\Login\Models\" />
     <Folder Include="Areas\Login\Views\Shared\" />
-    <Folder Include="wwwroot\BlogImage\" />
     <Folder Include="wwwroot\ProfilPictures\" />
   </ItemGroup>
 
