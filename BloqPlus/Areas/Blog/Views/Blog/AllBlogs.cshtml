@@ -32,7 +32,7 @@
                                     </li>
                                     <li class="mx-2">
                                         <a href="#">
-                                            <i class="far fa-user"></i> 
+                                            <i class="far fa-user"></i>
                                             @item.Writer.WriterName
                                         </a>
                                     </li>
@@ -54,11 +54,12 @@
                         </div>
                     }
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-left mt-4">
+                        <ul class="pagination pagination-lg">
                             @Html.PagedListPager((IPagedList)Model,
                             page=>Url.Action("AllBlogs",new {page}))
                         </ul>
                     </nav>
+    
                 </div>
             </div>
         </div>

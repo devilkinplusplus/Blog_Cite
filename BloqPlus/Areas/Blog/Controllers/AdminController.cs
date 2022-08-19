@@ -18,12 +18,14 @@ namespace BloqPlus.Areas.Blog.Controllers
         BlogManager bm = new BlogManager(new EfBlogRepository());
         public IActionResult Index()
         {
+            UpdateProfileId();
             return View();
         }
 
         [HttpGet]
         public IActionResult AddBlog()
         {
+            UpdateProfileId();
             DropdownCategoryValues();
             return View();
         }
@@ -78,9 +80,17 @@ namespace BloqPlus.Areas.Blog.Controllers
                                            }).ToList();
             ViewBag.v = values;
         }
+        [NonAction]
+        private void UpdateProfileId()
+        {
+            //Update
+            var sessionUser = JsonConvert.DeserializeObject<Writer>(HttpContext.Session.GetString("username"));
+            ViewBag.id = sessionUser.WriterId;
+        }
 
         public IActionResult BlogList(int id)
         {
+            UpdateProfileId();
             var sessionUser = JsonConvert.DeserializeObject<EntityLayer.Concreate.Blog>(HttpContext.Session.GetString("username"));
             id = sessionUser.WriterId;
             var values = bm.GetBlogsWithCategoryByWriter(id);
@@ -90,6 +100,7 @@ namespace BloqPlus.Areas.Blog.Controllers
         [HttpGet]
         public IActionResult UpdateBlog(int id)
         {
+            UpdateProfileId();
             DropdownCategoryValues();
             var data = bm.TGetById(id);
             data.BlogStatus = true;

@@ -18,12 +18,14 @@ namespace BloqPlus.Areas.Blog.Controllers
         Context c = new Context();
         public IActionResult Inbox()
         {
+            UpdateProfileId();
             return View();
         }
 
         [HttpGet]
         public IActionResult Compose()
         {
+            UpdateProfileId();
             WriterMails();
             return View();
         }
@@ -65,12 +67,14 @@ namespace BloqPlus.Areas.Blog.Controllers
 
         public IActionResult MailReadAll(int id)
         {
+            UpdateProfileId();
             var value = messageManager.GetMessageDetails(id);
             return View(value);
         }
 
         public IActionResult Sent(int id)
         {
+            UpdateProfileId();
             var sessionUser = JsonConvert.DeserializeObject<Writer>(HttpContext.Session.GetString("username"));
 
             id = sessionUser.WriterId;
@@ -78,6 +82,13 @@ namespace BloqPlus.Areas.Blog.Controllers
             return View(values);
         }
 
+        [NonAction]
+        private void UpdateProfileId()
+        {
+            //Update
+            var sessionUser = JsonConvert.DeserializeObject<Writer>(HttpContext.Session.GetString("username"));
+            ViewBag.id = sessionUser.WriterId;
+        }
 
     }
 }

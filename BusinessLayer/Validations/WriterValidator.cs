@@ -41,7 +41,7 @@ namespace BusinessLayer.Validations
             RuleFor(x => x.WriterPassword).MaximumLength(16).WithMessage("Şifre maksimum 16 simvol olmalıdır");
             RuleFor(x => x.WriterPassword).Matches(@"[0-9]+").WithMessage("Şifrede en az 1 reqem olmalıdır");
             //Image
-            RuleFor(x => x.WriterImage).NotEmpty().WithMessage("Şekil boş qala bilmez");
+            //RuleFor(x => x.WriterImage).NotEmpty().WithMessage("Şekil boş qala bilmez");
         }
     }
 }

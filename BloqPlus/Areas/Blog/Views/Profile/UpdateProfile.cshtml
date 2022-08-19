@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concreate.Writer
+@{
+    ViewData["Title"] = "UpdateProfile";
+    Layout = "~/Areas/Blog/Views/Shared/_AdminLayout_.cshtml";
+}
+
+@using (Html.BeginForm("UpdateProfile", "Profile", FormMethod.Post,
+new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x=>x.WriterId)
+
+    @Html.Label("Ad")
+    @Html.TextBoxFor(x=>x.WriterName,new{@class="form-control1 control3"})
+    <br />
+    @Html.Label("Mail")
+    @Html.TextBoxFor(x=>x.WriterMail,new{@class="form-control1 control3"})
+    <br />
+    @Html.Label("Şifrə")
+    @Html.PasswordFor(x=>x.WriterPassword,new{@class="form-control1 control3"})
+    <br />
+    @Html.Label("Şifrə Təkrar")
+    @Html.PasswordFor(x=>x.WriterConfirmPassword,new{@class="form-control1 control3"})
+    <br />
+
+    @Html.Label("Profil Şəkli")
+    <div class="blog_info_left_grid">
+        <img src="/ProfilPictures/@ViewData["img"]"
+         height=100 width=100 class="img-fluid" alt="">
+    </div>
+    <input class="form-control1 control3" type="file" name="WriterImage"
+       value="/ProfilPictures/@ViewData["img"]" />
+
+    @Html.Label("Haqqımda")
+    @Html.TextAreaFor(x=>x.WriterAbout,4,10,new{@class="form-control1 control3"})
+    <br />
+
+
+    <button type="submit" class="btn btn-info">Yadda Saxla</button>
+}
