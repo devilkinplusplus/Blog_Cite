@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,5 +22,6 @@ namespace EntityLayer.Concreate
         public int WriterId { get; set; }
         public Writer Writer { get; set; }
         public List<Comment> Comments { get; set; }
+
     }
 }

@@ -2,24 +2,29 @@
 using DataAccessLayer.Concreate;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace BloqPlus.Areas.Blog.ViewComponents.Category
 {
-    public class GetCategories:ViewComponent
+    public class GetCategories : ViewComponent
     {
-        CategoryManager cm = new CategoryManager(new EfCategoryRepository());
         Context c = new Context();
         public IViewComponentResult Invoke()
         {
-            var values = cm.GetMostRepeateds();
-            return View(values.Take(3));
+            //var result = c.Blogs
+            //    .GroupBy(x => x.CategoryID)
+            //    .OrderByDescending(g => g.Count())
+            //    .Take(3)
+            //    .Select(x => new
+            //    {
+            //        CategoryName = x.First().Category.CategoryName,
+            //        Count = x.Count()
+            //    }).ToList();
+
+            return View();
         }
 
-        private void Stats()
-        {
 
-
-        }
     }
 }
