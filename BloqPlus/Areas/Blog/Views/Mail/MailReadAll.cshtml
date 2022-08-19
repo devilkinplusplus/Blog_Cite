@@ -1,0 +1,22 @@
+﻿@model List<EntityLayer.Concreate.Message>
+@{
+    ViewData["Title"] = "MailReadAll";
+    Layout = "~/Areas/Blog/Views/Shared/_AdminLayout_.cshtml";
+}
+@foreach (var item in Model)
+{
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" alt="64x64" 
+                src="~/ProfilPictures/@item.SenderUser.WriterImage"
+                style="width: 64px; height: 64px;">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">@item.SenderUser.WriterName</h4>
+            @item.MessageContent
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+}

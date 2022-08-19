@@ -55,8 +55,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xDb250YWN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Mail/Compose.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xNYWlsXENvbXBvc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Mail/Inbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xNYWlsXEluYm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Mail/MailReadAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xNYWlsXE1haWxSZWFkQWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Mail/Sent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xNYWlsXFNlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/AdminInfo/Default.cshtml]

@@ -1,0 +1,44 @@
+﻿@model EntityLayer.Concreate.Message
+@{
+    ViewData["Title"] = "Compose";
+    Layout = "~/Areas/Blog/Views/Shared/_AdminLayout_.cshtml";
+}
+
+<div class="graphs">
+    <div class="xs">
+        <div class="col-md-12 inbox_right">
+            <div class="Compose-Message">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Yeni mail göndər
+                    </div>
+                    <div class="panel-body">
+                        <div class="alert alert-info">
+                            Bütün xanaları doldurun
+                        </div>
+                        <hr>
+                        <form action="/Blog/Mail/Compose" method="post">
+                            <label>Kimə: </label>
+                            @*<input type="text" class="form-control1 control3">*@
+                            @Html.DropDownListFor(x=>x.ReceiverID,
+                                (List<SelectListItem>)ViewBag.val,
+                            new {@class="form-control1 control3"})
+
+                            <label>Məzmun : </label>
+                            <textarea rows="6" name="MessageContent"
+                            class="form-control1 control2"></textarea>
+                            <hr>
+
+                            <button type="submit" class="btn btn-warning btn-warng1">
+                                <span class="glyphicon glyphicon-envelope tag_02"></span> 
+                                Göndər
+                            </button> &nbsp;
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
