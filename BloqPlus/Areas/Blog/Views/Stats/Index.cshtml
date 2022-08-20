@@ -1,0 +1,154 @@
+﻿@{
+    Layout = "~/Areas/Blog/Views/Shared/_AdminLayout_.cshtml";
+}
+
+<div class="widget_2">
+    <div class="col-sm-3 widget_1_box">
+        <div class="wid-social facebook">
+            <div class="social-icon">
+                <i class="fa fa-bold text-light icon-xlg pull-right"></i>
+            </div>
+            <div class="social-info">
+                <h3 class="number_counter bold count text-light start_timer counted">
+                    @ViewBag.CoB
+                </h3>
+                <h4 class="counttype text-light">Ədəd</h4>
+                <span class="percent">Sizin toplam bloqlarınızın sayı</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 widget_1_box">
+        <div class="wid-social twitter">
+            <div class="social-icon">
+                <i class="fa fa-th text-light icon-xlg pull-right"></i>
+            </div>
+            <div class="social-info">
+                <h3 class="number_counter bold count text-light start_timer counted">
+                    @ViewBag.CoAB
+                </h3>
+                <h4 class="counttype text-light">Ədəd</h4>
+                <span class="percent">Aktiv bloqlarınızın sayı</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 widget_1_box">
+        <div class="wid-social google-plus">
+            <div class="social-icon">
+                <i class="fa fa-comment text-light icon-xlg pull-right"></i>
+            </div>
+            <div class="social-info">
+                <h3 class="number_counter bold count text-light start_timer counted">
+                    @ViewBag.CoC
+                </h3>
+                <h4 class="counttype text-light">Ədəd</h4>
+                <span class="percent">Yazdığınız şərhlərin sayı</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 widget_1_box">
+        <div class="wid-social dribbble">
+            <div class="social-icon">
+                <i class="fa fa-comment text-light icon-xlg pull-right"></i>
+            </div>
+            <div class="social-info">
+                <h3 class="number_counter bold count text-light start_timer counted">
+                    @ViewBag.CoCbY
+                </h3>
+                <h4 class="counttype text-light">Ədəd</h4>
+                <span class="percent">Bloqlarınıza gələn şərhlərin sayı</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"> </div>
+</div>
+
+
+<div class="widget_3">
+    <div class="col-sm-3 widget_1_box">
+        <div class="wid-social linkedin">
+            <div class="social-icon">
+                <i class="fa fa-book text-light icon-xlg pull-right"></i>
+            </div>
+            <div class="social-info">
+                <h3 class="number_counter bold count text-light start_timer counted">
+                    @ViewBag.MyS
+                </h3>
+                <h4 class="counttype text-light">Sayı</h4>
+                <span class="percent">Göndərilən mesajların sayı</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 widget_1_box">
+        <div class="wid-social youtube">
+            <div class="social-icon">
+                <i class="fa fa-meh-o text-light icon-xlg pull-right"></i>
+            </div>
+            <div class="social-info">
+                <h3 class="number_counter bold count text-light start_timer counted">
+                    @ViewBag.MbS
+                </h3>
+                <h4 class="counttype text-light">Sayı</h4>
+                <span class="percent">Gələn mesajların sayı</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 widget_1_box">
+        <div class="wid-social skype">
+            <div class="social-icon">
+                <i class="fa fa-user text-light icon-xlg pull-right"></i>
+            </div>
+            <div class="social-info">
+                    <h3 class="number_counter bold count text-light start_timer counted">
+                        @ViewBag.YwI
+                    </h3>
+                <h4 class="counttype text-light">Sizin Id-niz</h4>
+                <span class="percent">Bu Id ilə qeydiyyatdasınız</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 widget_1_box">
+        <div class="wid-social flickr">
+            <div class="social-icon">
+                <i class="fa fa-flickr text-light icon-xlg pull-right"></i>
+            </div>
+            <div class="social-info">
+                <a href="/Blog/Blog/BlogReadAll/@ViewBag.rand">
+                    <h3 class="number_counter bold count text-light start_timer counted">
+                        Gedin
+                    </h3>
+                </a>
+                <h4 class="counttype text-light">Random bir bloq</h4>
+                <span class="percent">Random bir bloqa yönləndir</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"> </div>
+</div>
+
+<div class="wid_blog-desc">
+    <div class="wid_blog-left">
+        <img src="~/ProfilPictures/@ViewBag.pp" class="img-responsive" alt="">
+    </div>
+    <div class="wid_blog-right">
+        <h2>@ViewBag.name</h2>
+        <p>
+            @ViewBag.about
+        </p>
+        <ul class="list-unstyled list-inline">
+            <li><a href="#" class="text-muted">
+                @DateTime.Now.ToString("dd-MMM-yyyy")
+            </li>
+            <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+            <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+        </ul>
+    </div>
+    <div class="clearfix"> </div>
+</div>
