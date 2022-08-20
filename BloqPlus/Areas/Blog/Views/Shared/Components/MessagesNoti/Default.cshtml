@@ -1,61 +1,28 @@
-﻿
+﻿@model IEnumerable<EntityLayer.Concreate.Message>
+
 <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-comments-o"></i><span class="badge">4</span></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-comments-o"></i><span class="badge">
+            @ViewBag.MbS
+         </span></a>
     <ul class="dropdown-menu">
         <li class="dropdown-menu-header">
-            <strong>Messages</strong>
-            <div class="progress thin">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                    <span class="sr-only">40% Complete (success)</span>
-                </div>
-            </div>
+            <strong>Mesajlar</strong>
         </li>
-        <li class="avatar">
-            <a href="#">
-                <img src="~/adm/images/1.png" alt="" />
-                <div>New message</div>
-                <small>1 minute ago</small>
-                <span class="label label-info">NEW</span>
-            </a>
-        </li>
-        <li class="avatar">
-            <a href="#">
-                <img src="~/adm/images/2.png" alt="" />
-                <div>New message</div>
-                <small>1 minute ago</small>
-                <span class="label label-info">NEW</span>
-            </a>
-        </li>
-        <li class="avatar">
-            <a href="#">
-                <img src="~/adm/images/3.png" alt="" />
-                <div>New message</div>
-                <small>1 minute ago</small>
-            </a>
-        </li>
-        <li class="avatar">
-            <a href="#">
-                <img src="~/adm/images/4.png" alt="" />
-                <div>New message</div>
-                <small>1 minute ago</small>
-            </a>
-        </li>
-        <li class="avatar">
-            <a href="#">
-                <img src="~/adm/images/5.png" alt="" />
-                <div>New message</div>
-                <small>1 minute ago</small>
-            </a>
-        </li>
-        <li class="avatar">
-            <a href="#">
-                <img src="~/adm/images/pic1.png" alt="" />
-                <div>New message</div>
-                <small>1 minute ago</small>
-            </a>
-        </li>
+        @foreach (var item in Model.TakeLast(5))
+        {
+            <li class="avatar">
+                <a href="/Blog/Mail/MailReadAll/@item.MessageID">
+                    <img src="~/ProfilPictures/@item.SenderUser.WriterImage"
+                     class="img-responsive img-circle" alt="">
+                    <div>Yeni Mesaj</div>
+                    @* <small>1 minute ago</small>*@
+                    <span class="label label-info">Yeni</span>
+                </a>
+            </li>
+        }
         <li class="dropdown-menu-footer text-center">
-            <a href="#">View all messages</a>
+            <a href="/Blog/Mail/Inbox">Bütün mesajları gör</a>
         </li>
     </ul>
 </li>

@@ -34,7 +34,7 @@
     </div>
 
     <div class="col-sm-3 widget_1_box">
-        <div class="wid-social google-plus">
+        <div class="wid-social youtube">
             <div class="social-icon">
                 <i class="fa fa-comment text-light icon-xlg pull-right"></i>
             </div>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="col-sm-3 widget_1_box">
-        <div class="wid-social dribbble">
+        <div class="wid-social facebook">
             <div class="social-icon">
                 <i class="fa fa-comment text-light icon-xlg pull-right"></i>
             </div>
@@ -107,7 +107,9 @@
                     <h3 class="number_counter bold count text-light start_timer counted">
                         @ViewBag.YwI
                     </h3>
-                <h4 class="counttype text-light">Sizin Id-niz</h4>
+                    <h4>
+                        Sistemde adınız
+                    </h4>
                 <span class="percent">Bu Id ilə qeydiyyatdasınız</span>
             </div>
         </div>
@@ -124,7 +126,6 @@
                         Gedin
                     </h3>
                 </a>
-                <h4 class="counttype text-light">Random bir bloq</h4>
                 <span class="percent">Random bir bloqa yönləndir</span>
             </div>
         </div>
@@ -135,7 +136,7 @@
 
 <div class="wid_blog-desc">
     <div class="wid_blog-left">
-        <img src="~/ProfilPictures/@ViewBag.pp" class="img-responsive" alt="">
+        <img src="~/ProfilPictures/@ViewBag.pp" class="img-responsive img-circle" alt="">
     </div>
     <div class="wid_blog-right">
         <h2>@ViewBag.name</h2>
@@ -143,11 +144,9 @@
             @ViewBag.about
         </p>
         <ul class="list-unstyled list-inline">
-            <li><a href="#" class="text-muted">
+            <li>
                 @DateTime.Now.ToString("dd-MMM-yyyy")
             </li>
-            <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
-            <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
         </ul>
     </div>
     <div class="clearfix"> </div>

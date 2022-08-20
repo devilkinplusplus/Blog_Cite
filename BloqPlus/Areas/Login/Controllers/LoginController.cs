@@ -34,7 +34,7 @@ namespace BloqPlus.Areas.Login.Controllers
                 await HttpContext.SignInAsync(claimsPrincipal);
 
                 HttpContext.Session.SetString("username", JsonConvert.SerializeObject(datavalue));
-                return RedirectToAction("Index", "Blog",new { area="Blog" });
+                return RedirectToAction("Index", "Admin",new { area="Blog" });
             }
             else
                 return View();

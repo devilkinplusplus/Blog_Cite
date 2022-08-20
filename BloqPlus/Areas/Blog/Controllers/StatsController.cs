@@ -11,6 +11,14 @@ namespace BloqPlus.Areas.Blog.Controllers
         Context c = new Context();
         public IActionResult Index()
         {
+            StatsForWidgets();
+            UpdateProfileId();
+            return View();
+        }
+
+        [NonAction]
+        private void StatsForWidgets()
+        {
             //Session
             var sessionUser = JsonConvert.DeserializeObject<Writer>(HttpContext.Session.GetString("username"));
 
@@ -33,7 +41,7 @@ namespace BloqPlus.Areas.Blog.Controllers
 
             // Your Writer Id
             ViewBag.YwI = sessionUser.WriterId;
-            
+
 
             // Random blog
             Random rand = new Random();
@@ -44,11 +52,13 @@ namespace BloqPlus.Areas.Blog.Controllers
             ViewBag.pp = sessionUser.WriterImage;
             ViewBag.name = sessionUser.WriterName;
             ViewBag.about = sessionUser.WriterAbout;
-            
-
-
-
-            return View();
+        }
+        [NonAction]
+        private void UpdateProfileId()
+        {
+            //Update
+            var sessionUser = JsonConvert.DeserializeObject<Writer>(HttpContext.Session.GetString("username"));
+            ViewBag.id = sessionUser.WriterId;
         }
     }
 }

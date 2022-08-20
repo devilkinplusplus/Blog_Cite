@@ -1,23 +1,46 @@
-﻿<li class="dropdown">
-    <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img 
-        src="~/adm/images/1.png"><span class="badge">9</span></a>
+﻿
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
+        <img src="~/ProfilPictures/@ViewBag.pp"><span class="badge">
+            @ViewBag.id
+        </span>
+    </a>
     <ul class="dropdown-menu">
         <li class="dropdown-menu-header text-center">
-            <strong>Account</strong>
+            <strong>Hesab</strong>
         </li>
-        <li class="m_2"><a href="#"><i class="fa fa-bell-o"></i> Updates <span class="label label-info">42</span></a></li>
-        <li class="m_2"><a href="#"><i class="fa fa-envelope-o"></i> Messages <span class="label label-success">42</span></a></li>
-        <li class="m_2"><a href="#"><i class="fa fa-tasks"></i> Tasks <span class="label label-danger">42</span></a></li>
-        <li><a href="#"><i class="fa fa-comments"></i> Comments <span class="label label-warning">42</span></a></li>
+        <li class="m_2">
+            <a href="/Blog/Profile/UpdateProfile/@ViewBag.id">
+                <i class="fa fa-bell-o">
+                </i> Güncəllə 
+            </a>
+        </li>
+        <li class="m_2">
+            <a href="/Blog/Mail/Inbox/">
+                <i class="fa fa-envelope-o">
+                </i> Mesajlar <span class="label label-success">@ViewBag.MbS</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Blog/Stats/Index/">
+                <i class="fa fa-comments">
+                </i> Şərhlər <span class="label label-warning">@ViewBag.CoCbY</span>
+            </a>
+        </li>
         <li class="dropdown-menu-header text-center">
-            <strong>Settings</strong>
+            <strong>Tənzimləmələr</strong>
         </li>
-        <li class="m_2"><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-        <li class="m_2"><a href="#"><i class="fa fa-wrench"></i> Settings</a></li>
-        <li class="m_2"><a href="#"><i class="fa fa-usd"></i> Payments <span class="label label-default">42</span></a></li>
-        <li class="m_2"><a href="#"><i class="fa fa-file"></i> Projects <span class="label label-primary">42</span></a></li>
-        <li class="divider"></li>
-        <li class="m_2"><a href="#"><i class="fa fa-shield"></i> Lock Profile</a></li>
-        <li class="m_2"><a href="#"><i class="fa fa-lock"></i> Logout</a></li>
+        <li class="m_2">
+            <a href="/Blog/Profile/UpdateProfile/@ViewBag.id">
+                <i class="fa fa-user"></i> Profil
+            </a>
+        </li>
+
+        <li class="m_2">
+            <a href="/Login/Login/LogOut">
+                <i class="fa fa-lock"></i> Çıxış
+            </a>
+        </li>
     </ul>
 </li>
