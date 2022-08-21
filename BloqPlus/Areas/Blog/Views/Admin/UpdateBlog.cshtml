@@ -25,18 +25,22 @@
                     <label class="control-label">Şəkil</label>
                     <div class="blog_info_left_grid">
                         <img src="/BlogImage/@ViewData["img"]"
-                         height=100 width=100 class="img-fluid" alt="">
+                         height=100 width=100 class="img-fluid img-circle" alt="">
                     </div>
                     <input class="form-control" type="file" name="BlogImage"
                        value="/BlogImage/@ViewData["img"]" />
+
                 </div>
                 <div class="form-group">
                     <label class="control-label">Başlıq</label>
-                    @Html.TextAreaFor(x=>x.BlogContent,4,20,
-                new {@class="form-control1" , autocomplete="off"})
+                    @Html.TextAreaFor(x=>x.BlogContent,4,10,
+                new {@class="form-control1 control2" , autocomplete="off"})
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Yadda Saxla</button>
+                    <button type="submit" class="btn btn-primary">
+                        Yadda Saxla
+                        <i class="fa fa-save"></i>
+                    </button>
                 </div>
             </fieldset>
         }

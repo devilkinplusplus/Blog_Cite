@@ -79,6 +79,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xBZG1pbkluZm9cRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/BrowseSettings/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xCcm93c2VTZXR0aW5nc1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/CommentsByBlog/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xDb21tZW50c0J5QmxvZ1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -89,6 +93,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/GetLastBlog/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xHZXRMYXN0QmxvZ1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/GetWeather/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xHZXRXZWF0aGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/MailContent/Default.cshtml]
@@ -105,6 +113,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/OtherBlogsOfWriter/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xPdGhlckJsb2dzT2ZXcml0ZXJcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/Components/PeopleInAdmin/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xTaGFyZWRcQ29tcG9uZW50c1xQZW9wbGVJbkFkbWluXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/source/repos/BloqPlus/BloqPlus/Areas/Blog/Views/Shared/_AdminLayout_.cshtml]

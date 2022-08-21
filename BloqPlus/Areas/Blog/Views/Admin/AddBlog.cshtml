@@ -14,24 +14,24 @@
                 <div class="form-group">
                     <label class="control-label">Başlıq</label>
                     <input type="text" class="form-control1"
-                     name="BlogTitle" required="" autocomplete="off">
+                           name="BlogTitle" required="" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label class="control-label">Kateqoriya</label>
                     @Html.DropDownListFor(x=>x.CategoryID,
-                        (List<SelectListItem>)ViewBag.v,new {@class="form-control1" })
+                    (List<SelectListItem>)ViewBag.v,new {@class="form-control1" })
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">Şəkil</label>
-                    <input type="file" class="form-control1" 
-                    ng-model="model.url" name="BlogImage"
-                    required="">
+                    <input type="file" class="form-control1"
+                           name="BlogImage" required="">
                 </div>
-               <div class="form-group">
+
+                <div class="form-group">
                     <label class="control-label">Məzmun</label>
-                     @Html.TextAreaFor(x=>x.BlogContent,4,20,
-                         new {@class="form-control1" , autocomplete="off"})
+                    @Html.TextAreaFor(x=>x.BlogContent,5,10,
+                    new {@class="form-control1 control2" , autocomplete="off"})
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Yarat</button>

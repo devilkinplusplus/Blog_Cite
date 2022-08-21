@@ -4,6 +4,7 @@ using DataAccessLayer.EntityFramework;
 using EntityLayer.Concreate;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace BloqPlus.Areas.Blog.Controllers
 {
@@ -15,6 +16,7 @@ namespace BloqPlus.Areas.Blog.Controllers
         [HttpGet]
         public IActionResult UpdateProfile(int id)
         {
+            UpdateProfileId();
             var data = wm.TGetById(id);
             ViewData["img"] = data.WriterImage;
             return View(data);
@@ -57,6 +59,13 @@ namespace BloqPlus.Areas.Blog.Controllers
             }
             return RedirectToAction("UpdateProfile");
 
+        }
+        [NonAction]
+        private void UpdateProfileId()
+        {
+            //Update
+            var sessionUser = JsonConvert.DeserializeObject<Writer>(HttpContext.Session.GetString("username"));
+            ViewBag.id = sessionUser.WriterId;
         }
     }
 }

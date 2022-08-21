@@ -27,13 +27,16 @@ new { enctype = "multipart/form-data" }))
         <img src="/ProfilPictures/@ViewData["img"]"
          height=100 width=100 class="img-fluid" alt="">
     </div>
+    <br />
     <input class="form-control1 control3" type="file" name="WriterImage"
        value="/ProfilPictures/@ViewData["img"]" />
 
     @Html.Label("Haqqımda")
-    @Html.TextAreaFor(x=>x.WriterAbout,4,10,new{@class="form-control1 control3"})
+    @Html.TextAreaFor(x=>x.WriterAbout,4,10,new{@class="form-control1 control2"})
     <br />
 
-
-    <button type="submit" class="btn btn-info">Yadda Saxla</button>
+    <button type="submit" class="btn btn-info">
+        Yadda Saxla
+        <i class="fa fa-save"></i>
+    </button>
 }
