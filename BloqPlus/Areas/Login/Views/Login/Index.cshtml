@@ -9,7 +9,8 @@
     <!-- Custom Theme files -->
     <link href="~/login/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="~/login/css/font-awesome.css" rel="stylesheet"> <!-- Font-Awesome-Icons-CSS -->
-    <!-- //Custom Theme files -->
+    <!--SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- web font -->
     <link href="//fonts.googleapis.com/css?family=Vollkorn+SC:400,600,700,900&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
@@ -62,3 +63,13 @@
     </div>
 </body>
 </html>
+
+<script charset="utf-8">
+    @{
+        var messaje = TempData["Fail"];
+    }
+    var message = '@messaje';
+    if (message) {
+        swal("Opps", message,"warning");
+    }
+</script>

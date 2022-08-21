@@ -1,4 +1,6 @@
-﻿@model IEnumerable<EntityLayer.Concreate.Blog>
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@model IPagedList<EntityLayer.Concreate.Blog>
 
 @{
     ViewData["Title"] = "BlogList";
@@ -63,6 +65,12 @@
                 }
             </tbody>
         </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-lg">
+                @Html.PagedListPager((IPagedList)Model,
+                page=>Url.Action("BlogList",new {page}))
+            </ul>
+        </nav>
     </div>
 </div>
 

@@ -37,7 +37,11 @@ namespace BloqPlus.Areas.Login.Controllers
                 return RedirectToAction("Index", "Admin",new { area="Blog" });
             }
             else
+            {
+                TempData["Fail"] = "Istifadeci adi ve ya shifre yanlishdir";
                 return View();
+            }
+                
         }
 
         [HttpGet]

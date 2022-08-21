@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using X.PagedList;
 
 namespace BloqPlus.Areas.Blog.Controllers
 {
@@ -64,8 +65,7 @@ namespace BloqPlus.Areas.Blog.Controllers
             }
 
             bm.TAdd(b);
-            return RedirectToAction("Index");
-
+            return RedirectToAction("BlogList");
         }
 
         [NonAction]
@@ -88,13 +88,14 @@ namespace BloqPlus.Areas.Blog.Controllers
             ViewBag.id = sessionUser.WriterId;
         }
 
-        public IActionResult BlogList(int id)
+        public IActionResult BlogList(int id,int page=1)
         {
             UpdateProfileId();
             var sessionUser = JsonConvert.DeserializeObject<EntityLayer.Concreate.Blog>(HttpContext.Session.GetString("username"));
             id = sessionUser.WriterId;
+
             var values = bm.GetBlogsWithCategoryByWriter(id);
-            return View(values);
+            return View(values.ToPagedList(page,9));
         }
 
         [HttpGet]
