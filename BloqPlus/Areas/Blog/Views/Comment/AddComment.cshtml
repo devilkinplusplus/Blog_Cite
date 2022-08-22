@@ -29,7 +29,8 @@
             url:"/Blog/Comment/AddComment/"+id,
             data:values,
             succes:function(func){
-                let result = jQuery.parseJSON(func)
+                 location.reload(true);
+                //let result = jQuery.parseJSON(func)
             }
         })
     })

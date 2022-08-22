@@ -21,7 +21,7 @@ builder.Services.AddSession();
 builder.Services.AddMvc();
 builder.Services.AddMvc().AddRazorPagesOptions(options =>
 {
-    options.Conventions.AddPageRoute("/Blog/Blog/Index", "");
+    options.Conventions.AddPageRoute("/Login/Login/Index", "");
 });
 
 builder.Services.AddAuthentication(

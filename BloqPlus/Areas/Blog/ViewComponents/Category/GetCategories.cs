@@ -12,17 +12,9 @@ namespace BloqPlus.Areas.Blog.ViewComponents.Category
         Context c = new Context();
         public IViewComponentResult Invoke()
         {
-            //var result = c.Blogs
-            //    .GroupBy(x => x.CategoryID)
-            //    .OrderByDescending(g => g.Count())
-            //    .Take(3)
-            //    .Select(x => new
-            //    {
-            //        CategoryName = x.First().Category.CategoryName,
-            //        Count = x.Count()
-            //    }).ToList();
+            var result = c.Categories.ToList().Take(3);
 
-            return View();
+            return View(result);
         }
 
 
