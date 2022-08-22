@@ -39,6 +39,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseStatusCodePagesWithReExecute("/Blog/ErrorPage/Index");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -57,6 +59,7 @@ app.UseEndpoints(endpoints =>
       pattern: "{area:exists}/{controller=Blog}/{action=Index}/{id?}"
     );
 });
+
 
 app.MapRazorPages();
 

@@ -15,13 +15,12 @@ namespace BloqPlus.Areas.Blog.Controllers
         Context c = new Context();
         public IActionResult Index()
         {
-            var values = bm.TGetList();
+            var values = bm.GetBlogsWithCategory();
             return View(values);
         }
 
         public IActionResult AllBlogs(int page=1)
         {
-
             var values = bm.GetBlogsWithCategory();
             return View(values.ToPagedList(page,9));
         }

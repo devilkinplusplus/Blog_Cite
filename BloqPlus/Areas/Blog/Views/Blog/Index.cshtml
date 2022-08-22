@@ -6,43 +6,45 @@
 <div class="row">
     <!--left-->
     <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
-        @foreach(var item in Model.Where(x=>x.BlogStatus==true).TakeLast(1)){
-        <div class="blog-grid-top">
-            <div class="b-grid-top">
-                <div class="blog_info_left_grid">
-                    <a href="/Blog/Blog/BlogReadAll/@item.BlogID">
-                        <img src="/BlogImage/@item.BlogImage" 
-                        height=450 width=750 class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="blog-info-middle">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="far fa-calendar-alt"></i> 
-                                @item.BlogCreateDate.ToString("dd-MMM-yyyy")
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a href="#">
-                                <i class="far fa-comment"></i> 0 şərh
-                            </a>
-                        </li>
+        @foreach (var item in Model.Where(x => x.BlogStatus == true).TakeLast(1))
+        {
+            <div class="blog-grid-top">
+                <div class="b-grid-top">
+                    <div class="blog_info_left_grid">
+                        <a href="/Blog/Blog/BlogReadAll/@item.BlogID">
+                            <img src="/BlogImage/@item.BlogImage"
+                             height=450 width=750 class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info-middle">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="far fa-calendar-alt"></i>
+                                    @item.BlogCreateDate.ToString("dd-MMM-yyyy")
+                                </a>
+                            </li>
 
-                    </ul>
+                            <li>
+                                <a href="#">
+                                    <i class="far fa-user"></i>
+                                    @item.Writer.WriterName
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
+
+                <h3>
+                    <a href="/Blog/Blog/BlogReadAll/@item.BlogID">@item.BlogTitle </a>
+                </h3>
+                <p>
+                    @item.BlogContent
+                </p>
+                <a href="/Blog/Blog/BlogReadAll/@item.BlogID"
+               class="btn btn-primary read-m">Davamını Oxu</a>
             </div>
-
-            <h3>
-                <a href="/Blog/Blog/BlogReadAll/@item.BlogID">@item.BlogTitle </a>
-            </h3>
-            <p>
-                @item.BlogContent
-            </p>
-            <a href="/Blog/Blog/BlogReadAll/@item.BlogID" 
-            class="btn btn-primary read-m">Davamını Oxu</a>
-        </div>
         }
         <!--//silder-->
     </div>
@@ -51,30 +53,31 @@
     <aside class="col-lg-4 agileits-w3ls-right-blog-con text-left">
         <div class="tech-btm">
             <h4>Son Postlar</h4>
-            @foreach(var item in Model.Where(x=>x.BlogStatus==true).TakeLast(5)){
-            <div class="blog-grids row mb-3">
-                <div class="col-md-5 blog-grid-left">
-                    <a href="/Blog/Blog/BlogReadAll/@item.BlogID">
-                        <img src="/BlogImage/@item.BlogImage" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="col-md-7 blog-grid-right">
-
-                    <h5>
+            @foreach (var item in Model.Where(x => x.BlogStatus == true).TakeLast(5))
+            {
+                <div class="blog-grids row mb-3">
+                    <div class="col-md-5 blog-grid-left">
                         <a href="/Blog/Blog/BlogReadAll/@item.BlogID">
-                            @item.BlogTitle    
+                            <img src="/BlogImage/@item.BlogImage" class="img-fluid" alt="">
                         </a>
-                    </h5>
-                    <div class="sub-meta">
-                        <span>
-                            <i class="far fa-clock"></i> 
-                            @item.BlogCreateDate.ToString("dd-MMM-yyyy")
-                        </span>
                     </div>
-                </div>
+                    <div class="col-md-7 blog-grid-right">
 
-            </div>
-         }
+                        <h5>
+                            <a href="/Blog/Blog/BlogReadAll/@item.BlogID">
+                                @item.BlogTitle
+                            </a>
+                        </h5>
+                        <div class="sub-meta">
+                            <span>
+                                <i class="far fa-clock"></i>
+                                @item.BlogCreateDate.ToString("dd-MMM-yyyy")
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            }
 
         </div>
 
