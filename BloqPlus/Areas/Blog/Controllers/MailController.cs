@@ -47,7 +47,7 @@ namespace BloqPlus.Areas.Blog.Controllers
                 return RedirectToAction("Compose");
             }
             messageManager.TAdd(msg);
-            return RedirectToAction("Inbox");
+            return RedirectToAction("Sent");
         }
 
         [NonAction]

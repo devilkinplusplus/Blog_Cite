@@ -3,6 +3,8 @@ using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using EntityLayer.Concreate;
+using X.PagedList;
+
 namespace BloqPlus.Areas.Blog.ViewComponents.Mail
 {
     public class MailContent:ViewComponent

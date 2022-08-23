@@ -5,7 +5,7 @@
         Söhbət
         <small>(Online dostlar)</small>
     </h4>
-    @foreach (var item in Model)
+    @foreach (var item in Model.Take(8))
     {
         <div class="status-badge mrg10A">
             <img class="img-circle" width="60" src="~/ProfilPictures/@item.WriterImage" alt="">

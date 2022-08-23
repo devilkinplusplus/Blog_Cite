@@ -1,33 +1,42 @@
 ﻿@model IEnumerable<EntityLayer.Concreate.Message>
 <div class="mailbox-content">
 
-    <table class="table">
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr class="read checked">
-                    <td class="hidden-xs">
-                        <input type="checkbox" class="checkbox">
-                    </td>
-                    <td class="hidden-xs">
-                        <i class="fa fa-star"></i>
-                    </td>
-                    <td class="hidden-xs">
-                        @item.SenderUser.WriterMail
-                    </td>
-                    <td>
-                        <a href="/Blog/Mail/MailReadAll/@item.MessageID">
-                            @item.MessageContent
-                        </a>
-                    </td>
-                    <td>
-                        <i class="fa fa-paperclip"></i>
-                    </td>
-                    <td>
-                        @item.MessageDate.ToString("dd-MMM-yyyy")
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    @if (Model.Count() != 0)
+    {
+        <table class="table">
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr class="read checked">
+                        <td class="hidden-xs">
+                            <input type="checkbox" class="checkbox">
+                        </td>
+                        <td class="hidden-xs">
+                            <i class="fa fa-star"></i>
+                        </td>
+                        <td class="hidden-xs">
+                            @item.SenderUser.WriterMail
+                        </td>
+                        <td>
+                            <a href="/Blog/Mail/MailReadAll/@item.MessageID">
+                                @item.MessageContent
+                            </a>
+                        </td>
+                        <td>
+                            <i class="fa fa-paperclip"></i>
+                        </td>
+                        <td>
+                            @item.MessageDate.ToString("dd-MMM-yyyy")
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2> Mesaj qutunuz boşdur <i class="fa fa-meh-o"></i></h2>
+    }
 </div>

@@ -65,6 +65,7 @@ namespace BloqPlus.Areas.Blog.Controllers
             }
 
             bm.TAdd(b);
+            TempData["Success"] = "Yadda saxlanildi";
             return RedirectToAction("BlogList");
         }
 
@@ -139,6 +140,7 @@ namespace BloqPlus.Areas.Blog.Controllers
             }
 
             bm.TUpdate(data);
+            TempData["Success"] = "Yadda saxlanildi";
             return RedirectToAction("BlogList");
         }
 

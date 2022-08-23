@@ -22,7 +22,7 @@ namespace DataAccessLayer.EntityFramework
 
         public List<Message> GetMyInbox(int id)
         {
-            return con.Messages.Where(x => x.ReceiverID == id).Include(x => x.SenderUser).ToList();
+            return con.Messages.Where(x => x.ReceiverID == id).OrderByDescending(x=>x.MessageDate).Include(x => x.SenderUser).ToList();
         }
 
         public List<Message> GetMySent(int id)

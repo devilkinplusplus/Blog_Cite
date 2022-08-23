@@ -10,25 +10,25 @@
 
 <div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
     <div class="panel-body no-padding">
-        <table class="table table-striped">
-            <thead>
-                <tr class="warning">
-                    <th>Başlıq</th>
-                    <th>Kateqoriya</th>
-                    <th>Status</th>
-                    <th>Yazılma tarixi</th>
-                    <th>Güncəllə</th>
-                    <th>Sil</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (Model.Count != 0)
-                {
+        @if (Model.Count != 0)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr class="warning">
+                        <th>Başlıq</th>
+                        <th>Kateqoriya</th>
+                        <th>Status</th>
+                        <th>Yazılma tarixi</th>
+                        <th>Güncəllə</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
                     @foreach (var item in Model)
                     {
                         <tr data-expanded="true">
                             <td>
-                                 @(item.BlogTitle.Length > 25 ? item.BlogTitle.Substring(0, item.BlogTitle.Substring(0,25).LastIndexOf(" "))+"..." : item.BlogTitle +"...")
+                                @(item.BlogTitle.Length > 25 ? item.BlogTitle.Substring(0, item.BlogTitle.Substring(0,25).LastIndexOf(" "))+"..." : item.BlogTitle +"...")
                             </td>
                             <td>
                                 <span class="btn btn-info btn-sm">
@@ -67,15 +67,15 @@
                             </td>
                         </tr>
                     }
-                }
-                else
-                {
-                    <tr>
-                        <td>Heç bir yazınız yoxdur </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+
+                </tbody>
+            </table>
+        }
+        else
+        {
+            
+        <h2> Heç bir yazınız yoxdur <i class="fa fa-meh-o"></i></h2>
+        }
         <nav aria-label="Page navigation example">
             <ul class="pagination pagination-lg">
                 @Html.PagedListPager((IPagedList)Model,
@@ -118,5 +118,17 @@
                 });
         });
     }
+
+</script>
+
+<script>
+    @{
+        var messaje = TempData["Success"];
+    }
+            var message = '@messaje';
+            if (message) {
+                swal("Success", message, "success");
+            }
+
 
 </script>
